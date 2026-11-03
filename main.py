@@ -2,8 +2,7 @@
 chess = []
 r = ['a','b','c','d','e','f','g','h'] 
 c = ['8','7','6','5','4','3','2','1']
-board = [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]
-
+board = [[0 for _ in range(8)] for _ in range(8)]
 ########
 
 while True :
@@ -44,10 +43,8 @@ for i in range(len(chess)):
 #######
 
 
-for i in range(len(chess)):
-     for j in range(8):
-        for k in range(8):
-           board[chess[i][2]][chess[i][1]] = chess[i][0] 
+for piece in chess:
+    board[piece[2]][piece[1]] = piece[0]
 
      
         
